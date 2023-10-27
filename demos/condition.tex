@@ -1,0 +1,64 @@
+\documentclass{paper}
+
+\usepackage{etoolbox}
+
+\newcounter{num}
+\setcounter{num}{1}
+\newbool{isodd}
+\setbool{isodd}{true}
+
+\newcommand{\print}{
+    \ifbool{isodd}{
+        \boolfalse{isodd}
+        \par \arabic{num} is \textbf{ODD}!
+    }{
+        \booltrue{isodd}
+        \par \arabic{num} is \textbf{EVEN}!      
+    }
+    \stepcounter{num}
+}
+
+\begin{document}
+
+\print
+\print
+\print
+\print
+\print
+\print
+\print
+\print
+\print
+\print
+\print
+\print
+\print
+\print
+\print
+\print
+\print
+\print
+\print
+\print
+\print
+\print
+\print
+\print
+\print
+\print
+\print
+\print
+\print
+\print
+\print
+\print
+\print
+\print
+\print
+\print
+\print
+\print
+\print
+\print
+
+\end{document}

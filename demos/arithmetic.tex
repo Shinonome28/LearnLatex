@@ -1,0 +1,22 @@
+\documentclass{paper}
+
+\usepackage{calc}
+\usepackage{multido}
+
+\newcounter{A}
+\newcounter{B}
+\newcounter{temp}
+
+\setcounter{A}{0}
+\setcounter{B}{1}
+
+\begin{document}
+
+\multido{\i=1+1}{20} {
+    \noindent The \i\ of fibonaci number is \ \arabic{B} \\
+    \setcounter{temp}{\arabic{B}}
+    \setcounter{B}{\arabic{A}+\arabic{B}}
+    \setcounter{A}{\arabic{temp}}
+}
+
+\end{document}

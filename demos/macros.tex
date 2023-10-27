@@ -1,0 +1,68 @@
+\documentclass{paper}
+
+\usepackage{xkeyval}
+
+\makeatletter
+\define@key{length}{X}{\def\myOptionX{#1}}
+\define@key{length}{Y}{\def\myOptionY{#1}}
+
+\newcommand{\mylength}[1]{
+    \setkeys{length}{#1}
+    \ensuremath{
+        \sqrt{\myOptionX^2 + \myOptionY^2}
+    }
+}
+
+\makeatother
+
+
+\newcommand{\sayLove}[1]{#1 Love \LaTeX !}
+\newcommand{\sayLoveTwo}[2]{#1 loves #2 !}
+\newcommand{\myvec}[1]{
+    % \ensuremath activates math mode if there is not, do nothing if there is
+    \ensuremath{\vec{#1}}
+}
+
+% this is okay because if there is already a command then \providecommand do nothing.
+\providecommand{\myvec}[1]{\ensuremath{\mathbf{#1}}}
+
+% I don't see what it's used for...
+\DeclareRobustCommand{\Hahaha}{Just smile!}
+
+\usepackage{xspace}
+% \xspace can keep the space after macro in a line
+\newcommand{\momentumFourmula}{\ensuremath{p = mv}\xspace}
+
+% define a new environment
+\newenvironment{king}
+{ \rule{1ex}{1ex}\hspace{\stretch{1}} }
+{ \hspace{\stretch{1}}\rule{1ex}{1ex} }
+
+\usepackage{environ}
+\NewEnviron{makebold}{\textbf{\BODY}}
+
+\begin{document}
+
+This is only a document to test \LaTeX macros grammar. Check the source file.
+
+\sayLove{I}
+
+\sayLoveTwo{I}{\LaTeX}
+
+The vector of electric field is \myvec{E}.
+
+\momentumFourmula is right since Newton is right.
+
+\Hahaha
+
+\begin{king}
+    You says \ldots
+\end{king}
+
+\begin{makebold}
+    BOLD AND STRONG
+\end{makebold}
+
+\mylength{X=a,Y=b}
+
+\end{document}
