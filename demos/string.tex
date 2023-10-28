@@ -1,0 +1,16 @@
+\documentclass{paper}
+
+\usepackage{xstring}
+
+\newcommand{\mycheck}[1]{
+    \par The string ``#1'' has \StrLen{#1}{} characters.
+    \par Predicate ``#1 contains the word Hello'' is \IfSubStr{#1}{Hello}{true}{false}.
+}
+
+\begin{document}
+
+\mycheck{Hello world!}
+
+\mycheck{Fuck the world}
+
+\end{document}
