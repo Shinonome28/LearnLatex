@@ -1,5 +1,5 @@
 set terminal pdfcairo font "simsun,12"
-set output 'build/demo1.pdf'
+set output 'build/basic.pdf'
 
 set xlabel '月份'
 set ylabel '降水量（毫米）'
@@ -17,7 +17,7 @@ plot "example-data/gz-rain-2022.dat" u 1:2 w lp lc 3 lw 2 pt 7 ps 0.5 title "广
     "example-data/gz-rain-2022.dat" u 1:3 w lp lc 4 lw 2 pt 7 ps 0.5 title "上海"
 
 set terminal eps
-set output "build/demo1.eps"
+set output "build/basic.eps"
 set xlabel 'Month'
 set ylabel 'Precipitation (mm)'
 set title "Average Precipitation in Guangzhou and Shanghai 2022"

@@ -16,26 +16,10 @@ set terminal svg
 set output "build/svg-test.svg"
 test
 
-set terminal canvas
-set output "build/canvas-test.html"
-test
-
-set terminal epslatex
+set terminal epslatex standalone
 set output "build/epslatex-test.tex"
-test
-
-set terminal pslatex  
-set output "build/pslatex-test.tex"
-test
-
-set terminal tikz  
-set output "build/tikz-test.tex"
 test
 
 set terminal png
 set output "build/png-test.png"
-test
-
-set terminal jpeg
-set output "build/jpeg-test.jpeg"
 test
